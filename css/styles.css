@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+       url("../fonts/rubik-v11-latin-regular.woff2") format("woff2"),
+       url("../fonts/rubik-v11-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+       url("../fonts/rubik-v11-latin-500.woff2") format("woff2"),
+       url("../fonts/rubik-v11-latin-500.woff") format("woff");
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  margin-top: 112px;
+  background-color: #fff;
+  /* color: #000000; */
+}
+
+.body-nojs {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.site-header-nojs {
+  position: static;
+  margin-bottom: 32px;
+}
+
+.site-header-open {
+  background-color: rgba(36, 42, 69, 0.95);
+  min-height: 100vh;
+}
+
+.site-header-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header-open .site-header-container {
+  height: 100vh;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.site-header-nojs .header-wrapper {
+  justify-content: center;
+}
+
+.logo-img {
+  display: block;
+  width: 149px;
+  height: 25px;
+}
+
+.site-header-open .logo-img {
+  background-color: #fff;
+}
+
+.toggler {
+  position: relative;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/hamburger-img.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.site-header-open .toggler {
+  background-image: url("../img/closed-togger.svg");
+}
+
+.site-header-nojs .toggler {
+  display: none;
+}
+
+.toggler::before {
+  display: block;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.5);
+}
+
+.sitenav-wrapper {
+  display: none;
+  padding-bottom: 48px;
+}
+
+.site-header-open .sitenav-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.site-header-nojs .sitenav-wrapper {
+  display: block;
+}
+
+.sitenav {
+  margin-bottom: auto;
+}
+
+.site-header-nojs .sitenav {
+  margin-bottom: 24px;
+}
+
+.sitenav-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  list-style-type: none;
+}
+
+.site-header-nojs .sitenav-list {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.sitenav-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.site-header-nojs .sitenav-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.sitenav-link {
+  display: block;
+  padding: 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 17px;
+  letter-spacing: 2.30769px;
+}
+
+.site-header-nojs .sitenav-link {
+  color: #222;
+}
+
+.sitenav-button {
+  display: block;
+  padding: 16px 0;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 17px;
+  letter-spacing: 2.30769px;
+}
+
+.site-header-nojs .sitenav-button {
+  color: #222;
+  border: 2px solid #222;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-link {
+  display: block;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.site-header-nojs .social-link {
+  background-color: blue;
+}
+
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+}
